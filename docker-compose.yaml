@@ -24,4 +24,14 @@ services:
       - 3132
     ports:
       - "${GRAFANA_PORT}:3000"
+    loki:
+    image: grafana/loki:$LOKI_VERSION
+    ports:
+      - "${LOKI_PORT}:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+  promtail:
+    image: grafana/promtail:$PROMTAIL_VERSION
+    volumes:
+      - /var/log:/var/log
+    command: -config.file=/etc/promtail/config.yml 
  
