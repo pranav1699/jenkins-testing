@@ -25,13 +25,13 @@ services:
     ports:
       - "${GRAFANA_PORT}:3000"
   loki:
-    container_name:loki_$PROJECT
+    container_name: loki_$PROJECT
     image: grafana/loki:$LOKI_VERSION
     ports:
       - "${LOKI_PORT}:3100"
     command: -config.file=/etc/loki/local-config.yaml
   promtail:
-    container_name:promtail_$PROJECT
+    container_name: promtail_$PROJECT
     image: grafana/promtail:$PROMTAIL_VERSION
     volumes:
       - /var/log:/var/log
