@@ -25,7 +25,7 @@ services:
     ports:
       - "${GRAFANA_PORT}:3000"
   loki:
-    container_name: loki_$PROJECT
+    container_name: grafana_loki_$PROJECT
     image: grafana/loki:$LOKI_VERSION
     ports:
       - "${LOKI_PORT}:3100"
