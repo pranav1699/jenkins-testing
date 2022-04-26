@@ -12,7 +12,7 @@ pipeline {
     }
     stage("Remove containers"){
       steps{
-      bat 'docker-compose down --remove-orphans'
+      bat 'docker-compose restart'
         
       }
     }
