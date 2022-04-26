@@ -2,7 +2,7 @@ version: '3'
 services:
   timescale_trade245:
     image: timescale/timescaledb:latest-pg11
-    container_name: "timescale_${PROJECT}"
+    container_name: timescale_$PROJECT
     environment:
         - POSTGRES_USER=$PG_USER
         - POSTGRES_PASSWORD=$PG_PASSWORD
@@ -24,8 +24,4 @@ services:
       - 3132
     ports:
       - "${GRAFANA_PORT}:3000"
-    volumes:
-      - $WORKSPACE/dashboards/:/etc/grafana/provisioning/dashboards/
-      - /projects/$PROJECT/grafana/:/etc/grafana/provisioning/datasources/
-      - /data/mt5_data/$PROJECT/grafana/grafana-volume:/var/lib/grafana
-      - /data/mt5_data/$PROJECT/grafana/log:/var/log
+ 
