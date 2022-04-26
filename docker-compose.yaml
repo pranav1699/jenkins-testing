@@ -4,9 +4,9 @@ services:
     image: timescale/timescaledb:latest-pg11
     container_name: "timescale_${PROJECT}"
     environment:
-        - POSTGRES_USER="${PG_USER}"
-        - POSTGRES_PASSWORD="${PG_PASSWORD}"
-        - POSTGRES_DB="${PG_DB}"
+        - POSTGRES_USER=$PG_USER
+        - POSTGRES_PASSWORD=$PG_PASSWORD
+        - POSTGRES_DB=$PG_DB
         - PG_SYSTEM_SHARED_BUFFERS=256MB
     volumes:
       - /data/mt5_data/$PROJECT/data/export/:/var/lib/postgresql/data/
