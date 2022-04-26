@@ -24,7 +24,7 @@ services:
       - 3132
     ports:
       - "${GRAFANA_PORT}:3000"
-    loki:
+  loki:
     image: grafana/loki:$LOKI_VERSION
     ports:
       - "${LOKI_PORT}:3100"
