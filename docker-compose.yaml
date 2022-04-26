@@ -14,12 +14,12 @@ services:
       - "${PG_PORT}:${PG_PORT}"
   grafana_trade245:
     hostname: grafana
-    container_name: "grafana_${PROJECT}"
-    image: "grafana/grafana:${GRAFANA_VERSION}"
+    container_name: grafana_$PROJECT
+    image: grafana/grafana:$GRAFANA_VERSION
     environment:
       TZ: "Europe/Moscow"
-      GF_SECURITY_ADMIN_PASSWORD: "${GRAFANA_ADMIN_PASSWORD}"
-      GF_SECURITY_ADMIN_USER: "${GRAFANA_ADMIN_USER}"
+      GF_SECURITY_ADMIN_PASSWORD: $GRAFANA_ADMIN_PASSWORD
+      GF_SECURITY_ADMIN_USER: $GRAFANA_ADMIN_USER
     expose:
       - 3132
     ports:
