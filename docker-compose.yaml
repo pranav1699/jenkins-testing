@@ -24,3 +24,8 @@ services:
       - 3132
     ports:
       - "${GRAFANA_PORT}:3000"
+    volumes:
+      - $WORKSPACE/dashboards/:/etc/grafana/provisioning/dashboards/
+      - /projects/$PROJECT/grafana/:/etc/grafana/provisioning/datasources/
+      - /data/mt5_data/$PROJECT/grafana/grafana-volume:/var/lib/grafana
+      - /data/mt5_data/$PROJECT/grafana/log:/var/log
