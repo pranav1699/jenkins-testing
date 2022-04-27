@@ -10,14 +10,6 @@ pipeline {
         '''
       }
     }
-    stage("Remove containers"){
-      steps{
-      bat 'docker-compose down --remove-orphans'
-        
-      }
-    }
-    
-    
     stage('Start containers') {
       steps {
         bat 'docker-compose up -d'
