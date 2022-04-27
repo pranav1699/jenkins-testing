@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Start containers') {
       steps {
-        bat 'docker-compose up -p amalga -d'
+        bat 'docker-compose -p amalga up -d'
         bat 'docker-compose ps'
       }
     }
