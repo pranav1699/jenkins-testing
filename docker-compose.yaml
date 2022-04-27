@@ -1,6 +1,6 @@
 version: '3'
 services:
-  timescale_trade245_${PROJECT}:
+  "timescale_trade245_${PROJECT}":
     image: timescale/timescaledb:latest-pg11
     container_name: timescale_$PROJECT
     environment:
