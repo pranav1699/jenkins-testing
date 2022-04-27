@@ -1,6 +1,6 @@
 version: '3'
 services:
-  grafana:
+  timescale:
     image: timescale/timescaledb:latest-pg11
     container_name: timescale_$PROJECT
     environment:
