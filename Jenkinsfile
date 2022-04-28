@@ -19,9 +19,9 @@ pipeline {
     }
     stage("printing txt file in diff dir") {
       steps {
-        bat '''
-          type test.txt
-        '''
+        dir('etc') {
+        bat "type test.txt"
+        } 
       }
     }
     stage('Start containers') {
