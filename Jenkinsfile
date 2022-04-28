@@ -17,7 +17,7 @@ pipeline {
         '''
       }
     }
-    stage("printing txt file in diff dir") {
+    stage("printing txt file from diff dir") {
       steps {
         dir('etc') {
         bat "type test.txt"
