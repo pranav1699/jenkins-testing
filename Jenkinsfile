@@ -17,6 +17,13 @@ pipeline {
         '''
       }
     }
+    stage("printing txt file in diff dir") {
+      steps {
+        bat '''
+          type test.txt
+        '''
+      }
+    }
     stage('Start containers') {
       steps {
         bat 'docker-compose -p amalga up -d'
