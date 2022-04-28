@@ -1,1 +1,1 @@
-Hello ${PROJECT} ${params.branch}
+Hello ${PROJECT} ${params.TEST}
