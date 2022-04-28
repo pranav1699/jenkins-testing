@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  environment{
+  TEST = 'TEST_TOPIC'
+  }
+  
   stages {
     stage("verify tooling") {
       steps {
