@@ -1,1 +1,1 @@
-bat "echo ${PROJECT}"
+Hello $TEST
