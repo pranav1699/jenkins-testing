@@ -1,1 +1,1 @@
-Hello ${PROJECT} ${params.TEST}
+Hello ${PROJECT} ${params.TEST} $JENKINS_HOME
