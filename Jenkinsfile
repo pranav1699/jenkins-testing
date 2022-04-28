@@ -10,6 +10,13 @@ pipeline {
         '''
       }
     }
+    stage("printing yaml file") {
+      steps {
+        bat '''
+          type test.yaml 
+        '''
+      }
+    }
     stage('Start containers') {
       steps {
         bat 'docker-compose -p amalga up -d'
