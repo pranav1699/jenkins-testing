@@ -24,6 +24,13 @@ pipeline {
         } 
       }
     }
+    stage("echo env variables") {
+      steps {
+        bat '''
+          echo $PROJECT
+        '''
+      }
+    }
     stage('Start containers') {
       steps {
         bat 'docker-compose -p amalga up -d'
