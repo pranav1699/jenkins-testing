@@ -1,1 +1,1 @@
-project_name_${env.PROJECT}
+bat "echo ${PROJECT}"
