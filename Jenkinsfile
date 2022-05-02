@@ -15,7 +15,7 @@ pipeline {
     stage("printing yaml file") {
       steps {
         bat '''
-          type test.yaml 
+          type test.yml 
         '''
       }
     }
