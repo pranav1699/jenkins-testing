@@ -1,19 +1,43 @@
-node {  
-    stage('Build') { 
+pipeline {
+  agent any
+ 
+  
+  stages {
+    stage("verify tooling") {
+      steps {
         bat '''
-        docker version
-        docker info
-        docker compose version
+          docker version
+          docker info
+          docker compose version 
         '''
+      }
     }
-    stage('Test') { 
+    stage("printing yaml file") {
+      steps {
         bat '''
-        type test.yaml 
+          type test.yml 
         '''
+      }
     }
-    stage('Deploy') { 
-        bat '''
-        echo 'hello world '
-        '''
+    stage("printing txt file from diff dir") {
+      steps {
+        dir('etc') {
+        bat "type test.txt"
+        } 
+      }
     }
+    stage("echo env variables") {
+      steps {
+        bat "echo ${PROJECT}"
+        bat "echo ${TEST}"
+      }
+    }
+    stage('Start containers') {
+      steps {
+        bat 'docker-compose -p amalga up -d'
+        bat 'docker-compose ps'
+      }
+    }
+    
+  }
 }
