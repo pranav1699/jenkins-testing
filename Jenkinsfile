@@ -29,7 +29,6 @@ pipeline {
     stage("echo env variables") {
       steps {
         bat "echo ${PROJECT}"
-        bat "echo ${TEST}"
       }
     }
     stage('Start containers') {
