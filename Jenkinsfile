@@ -8,7 +8,7 @@ node {
     }
     stage('Test') { 
         bat '''
-        type test.yml
+        type test.yml 
         '''
     }
     stage('Deploy') { 
