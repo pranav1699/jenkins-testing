@@ -13,7 +13,7 @@ node {
     }
     stage('Deploy') { 
         bat '''
-        bat echo 'hello wrold '
+        echo 'hello world '
         '''
     }
 }
