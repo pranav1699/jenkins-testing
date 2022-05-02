@@ -8,7 +8,7 @@ node {
     }
     stage('Test') { 
         bat '''
-        type > test.txt
+        type test.txt
         '''
     }
     stage('Deploy') { 
