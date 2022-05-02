@@ -1,15 +1,19 @@
-stage('Build') {
-    bat ' docker version '
-    bat 'docker info'
-    bat 'docker compose version'
-}
-
-stage('Test') {
-    windows: {
-        node('windows') {
-            bat '''
-          type test.yml 
+node {  
+    stage('Build') { 
+        bat '''
+        docker version
+        docker info
+        docker compose version
         '''
-        }
+    }
+    stage('Test') { 
+        bat '''
+        type > test.txt
+        '''
+    }
+    stage('Deploy') { 
+        bat '''
+        bat echo 'hello wrold '
+        '''
     }
 }
