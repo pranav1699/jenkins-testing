@@ -18,7 +18,7 @@ pipeline {
       steps {
         
        
-        bat "set PROJECT = ${PROJECT}"
+        bat "sh gen.sh"
         bat 'envsubst <test.yml'
         bat '''
           type test.yml 
