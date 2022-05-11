@@ -19,7 +19,7 @@ pipeline {
         
        
         bat "set PROJECT = ${PROJECT}"
-        bat 'python3 main.py'
+        bat 'envsubst <template.txt'
         bat '''
           type test.yml 
         '''
