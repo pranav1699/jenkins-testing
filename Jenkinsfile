@@ -14,7 +14,10 @@ pipeline {
     }
     stage("printing yaml file") {
       steps {
+        script{
         def PROJ = "${PROJECT}"
+        bat "echo ${PROJ}"
+        }
         bat "echo ${PROJ}"
         bat "type .env"
         bat '''
