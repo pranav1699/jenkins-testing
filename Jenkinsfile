@@ -18,7 +18,7 @@ pipeline {
       steps {
         
        
-        bat "sh gen.sh"
+        bat "bash gen.sh"
         bat '''
           type test.yml 
         '''
