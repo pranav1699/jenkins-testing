@@ -15,6 +15,7 @@ pipeline {
     stage("printing yaml file") {
       steps {
         bat "echo ${PROJECT}"
+        bat "type .env"
         bat '''
           type test.yml 
         '''
