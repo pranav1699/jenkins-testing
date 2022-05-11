@@ -16,8 +16,10 @@ pipeline {
       steps {
         script{
         def PROJ = "${PROJECT}"
+        def data = readFile(file: 'test.yaml')
         bat "echo ${PROJ}"
         bat "type test.yaml"
+        println(data)
         }
         bat "echo ${PROJECT}"
         bat "type .env"
