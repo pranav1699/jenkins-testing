@@ -14,14 +14,13 @@ pipeline {
     }
     stage("printing yaml file") {
       steps {
-        configFileProvider([configFile(fileId: "config.env", targetLocation: 'env.groovy', variable: 'ENV_CONFIG')]) {
-          load "env.groovy"; 
+        
         bat "echo ${PROJECT}"
         bat "type config.env"
         bat '''
           type test.yml 
         '''
-        }
+        
       }
     }
     stage("printing txt file from diff dir") {
