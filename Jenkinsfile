@@ -17,7 +17,7 @@ pipeline {
         configFileProvider([configFile(fileId: "config.env", targetLocation: 'env.groovy', variable: 'ENV_CONFIG')]) {
           load "env.groovy"; 
         bat "echo ${PROJECT}"
-        bat "type .env"
+        bat "type config.env"
         bat '''
           type test.yml 
         '''
