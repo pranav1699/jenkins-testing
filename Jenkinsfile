@@ -18,8 +18,8 @@ pipeline {
       steps {
         
         bat "echo ${PROJECT}"
-        withEnv(["ANOTHER_ENV_VAR=${PROJECT}"]) {
-                    echo "ANOTHER_ENV_VAR = ${env.ANOTHER_ENV_VAR}"
+        withEnv(["PROJECT=${PROJECT}"]) {
+                    echo "PROJECT = ${env.ANOTHER_ENV_VAR}"
                 }
         bat "type .env"
         bat '''
