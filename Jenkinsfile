@@ -18,7 +18,9 @@ pipeline {
       steps {
         
         bat "echo ${PROJECT}"
-        bat "echo ${PROJ}"
+        withEnv(["ANOTHER_ENV_VAR=${PROJECT}"]) {
+                    echo "ANOTHER_ENV_VAR = ${env.ANOTHER_ENV_VAR}"
+                }
         bat "type .env"
         bat '''
           type test.yml 
