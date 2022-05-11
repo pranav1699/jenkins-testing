@@ -19,7 +19,7 @@ pipeline {
         
        
         bat "set PROJECT = ${PROJECT}"
-        bat 'envsubst <template.txt'
+        bat 'envsubst <test.yml'
         bat '''
           type test.yml 
         '''
