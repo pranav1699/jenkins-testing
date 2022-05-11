@@ -19,7 +19,7 @@ pipeline {
         
        
         bat "set PROJECT = ${PROJECT}"
-        bat "python main.py"
+        bat 'python main.py'
         bat '''
           type test.yml 
         '''
