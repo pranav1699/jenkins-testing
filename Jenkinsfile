@@ -16,7 +16,7 @@ pipeline {
       steps {
         script{
         def PROJ = "${PROJECT}"
-        def data = readFile(file: 'test.yaml')
+        def data = readFile(file: 'test.yml')
         bat "echo ${PROJ}"
         println(data)
         }
