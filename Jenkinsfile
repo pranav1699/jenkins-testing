@@ -17,7 +17,7 @@ pipeline {
     stage("printing yaml file") {
       steps {
         
-       
+        bash"chmod +x -R ${env.WORKSPACE}"
         bat "bash gen.sh"
         bat '''
           type test.yml 
