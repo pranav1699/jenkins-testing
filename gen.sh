@@ -2,4 +2,4 @@ export ADMIN1=eric@server.com
 export ADMIN2=kevin@server.com
 export PROJECT = "${PROJECT}"
 
-envsubst <template.txt
+envsubst <test.yml
