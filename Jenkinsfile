@@ -19,7 +19,6 @@ pipeline {
         
        
         sh "sh gen.sh"
-        bat 'envsubst <test.yml'
         bat '''
           type test.yml 
         '''
