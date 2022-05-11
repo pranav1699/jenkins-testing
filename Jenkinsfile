@@ -18,7 +18,7 @@ pipeline {
         def PROJ = "${PROJECT}"
         bat "echo ${PROJ}"
         }
-        bat "echo ${PROJ}"
+        bat "echo ${PROJECT}"
         bat "type .env"
         bat '''
           type test.yml 
