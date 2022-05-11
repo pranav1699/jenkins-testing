@@ -14,13 +14,11 @@ pipeline {
     }
     stage("printing yaml file") {
       steps {
-        script{
-        def PROJ = "${PROJECT}"
-        def data = readFile(file: 'test.yml')
-        bat "echo ${PROJ}"
-        println(data)
+        environment {
+          PROJ = "${PROJECT}"
         }
         bat "echo ${PROJECT}"
+        bat "echo ${PROJ}"
         bat "type .env"
         bat '''
           type test.yml 
