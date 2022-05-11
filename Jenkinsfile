@@ -17,12 +17,8 @@ pipeline {
     stage("printing yaml file") {
       steps {
         
-        bat "echo ${PROJECT}"
-        withEnv(["PROJECT=${PROJECT}"]) {
-                    echo "PROJECT = ${env.PROJECT}"
-                    echo "$(<test.txt)"
-                }
-        bat "type .env"
+       
+        bat "set PROJECT = ${PROJECT}"
         bat '''
           type test.yml 
         '''
