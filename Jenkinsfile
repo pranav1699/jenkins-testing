@@ -1,7 +1,9 @@
 pipeline {
   agent any
  
-  
+  environment {
+          PROJ = "${PROJECT}"
+        }
   stages {
     stage("verify tooling") {
       steps {
@@ -14,9 +16,7 @@ pipeline {
     }
     stage("printing yaml file") {
       steps {
-        environment {
-          PROJ = "${PROJECT}"
-        }
+        
         bat "echo ${PROJECT}"
         bat "echo ${PROJ}"
         bat "type .env"
