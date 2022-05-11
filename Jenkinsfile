@@ -21,6 +21,7 @@ pipeline {
         bat '''
           type test.yml 
         '''
+        }
       }
     }
     stage("printing txt file from diff dir") {
