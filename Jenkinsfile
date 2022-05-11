@@ -17,7 +17,7 @@ pipeline {
         script{
         def PROJ = "${PROJECT}"
         bat "echo ${PROJ}"
-        bat "type test.txt"
+        bat "type test.yaml"
         }
         bat "echo ${PROJECT}"
         bat "type .env"
