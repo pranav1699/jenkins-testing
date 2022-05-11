@@ -20,7 +20,7 @@ pipeline {
         bat "echo ${PROJECT}"
         withEnv(["PROJECT=${PROJECT}"]) {
                     echo "PROJECT = ${env.PROJECT}"
-                    echo "cat test.yml"
+                    echo "$(<test.txt)"
                 }
         bat "type .env"
         bat '''
