@@ -1,1 +1,1 @@
-Hello $PROJECT  $JENKINS_HOME
+"Hello ${env.PROJECT}  ${env.JENKINS_HOME}"
